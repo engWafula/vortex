@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Web3 from 'web3';
 import { shortenAddress } from '../utils/shortenAddress';
+import Metamask from '../components/metamask';
 
 const Hero = () => {
   const [account, setAccount] = useState('0x000');
@@ -14,9 +15,10 @@ const Hero = () => {
     } else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider);
     } else {
-      window.alert(
-        'Non-Ethereum browser detected. You should consider trying MetaMask!'
-      );
+      // window.alert(
+      //   'Non-Ethereum browser detected. You should consider trying MetaMask!'
+      // );
+      <Metamask />;
     }
   }
 
