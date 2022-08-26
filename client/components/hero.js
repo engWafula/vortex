@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Web3 from 'web3';
+import { shortenAddress } from '../utils/shortenAddress';
 
 const Hero = () => {
+  const [account, setAccount] = useState('0x000');
+
+  async function loadWeb3() {
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum);
+      await window.ethereum.enable();
+    } else if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider);
+    } else {
+      window.alert(
+        'Non-Ethereum browser detected. You should consider trying MetaMask!'
+      );
+    }
+  }
+
+  async function loadBlockchainData() {
+    const web3 = window.web3;
+    const accounts = await web3.eth.getAccounts();
+    const account = accounts[0];
+    console.log(account);
+    setAccount(account);
+  }
+
+  useEffect(() => {
+    loadWeb3();
+    loadBlockchainData();
+  }, []);
+
   return (
     <>
       <div className='relative bg-white overflow-hidden bg-transparent'>
@@ -46,6 +76,15 @@ const Hero = () => {
       <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 mt-4 lg:mt-32'>
         <div className='h-56 w-full sm:h-72 lg:h-3/5 bg-white relative'>
           <Image src='/hero.gif' layout='fill' alt='' objectFit='contain' />
+        </div>
+        <div className='mt-5  md:ml-60 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
+          <div className='mt-3 sm:mt-0 sm:ml-3'>
+            <div>
+              <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10'>
+                Your Address: {shortenAddress(account)}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>
