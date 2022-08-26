@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/hero';
 import Features from '../components/features';
 import Head from 'next/head';
+import Footer from '../components/footer';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       </Head>
       <Hero />
       <Features />
+      <Footer />
     </>
   );
 }
