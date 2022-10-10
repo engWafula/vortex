@@ -14,11 +14,11 @@ module.exports = {
       port: 8545,
       network_id: '*',
     },
-    rinkeby: {
+    goerli: {
       provider: function () {
         return new HDWalletProvider(mnemonic, url);
       },
-      network_id: 4,
+      network_id: 5,
     },
   },
   solc: {
