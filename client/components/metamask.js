@@ -88,7 +88,7 @@ export default function Example(props) {
                       <span class='flex-1 ml-3 whitespace-nowrap'>
                         {process.env.NODE_ENV === 'development'
                           ? 'Select Localhost 8545 Network in metamask'
-                          : 'Select Rinkeby Network in metamask'}
+                          : 'Select Goerli Network in metamask'}
                       </span>
                     </a>
                   </li>
