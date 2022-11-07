@@ -152,7 +152,6 @@ function ProductDetailPage(props) {
           setSale={flag => {
             setSale(flag);
           }}
-          buy={buy}
           productId={productId}
           metamaskConnected={metamaskConnected}
         />
