@@ -47,8 +47,8 @@ const ProductCard = props => {
                 options
               )}
             />
-            <DetailItem field={'Price'} value={props.price + ' Wei'} />
-            <DetailItem field={'MRP'} value={props.mrp + ' Wei'} />
+            <DetailItem field={'Price'} value={props.price + ' UGX'} />
+            <DetailItem field={'MRP'} value={props.mrp + ' UGX'} />
           </ul>
         </div>
         {props.isOwner ? (
