@@ -11,12 +11,13 @@ const Message = ({ msg }) => {
           <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
             {msg}
           </h2>
-                            <Link
-                           href='/product/new'
-                    className='group relative w-full flex justify-center mt-2 py-5 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                  >
-                    Start Minting Your Product
-                  </Link>
+                 <div className='rounded-md shadow mt-10'>
+                    <Link href='/product/new'>
+                      <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
+                        Mint Your Product 
+                      </a>
+                    </Link>
+                  </div>
         </div>
       </div>
     </div>
