@@ -192,7 +192,7 @@ function NewProductPage(props) {
                   type='number'
                   required
                   className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
-                  placeholder='Enter Price in Wei'
+                  placeholder='Enter Price in UGX'
                   value={price}
                   onChange={e => {
                     setPrice(e.target.value);
@@ -206,7 +206,7 @@ function NewProductPage(props) {
                   type='number'
                   required
                   className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
-                  placeholder='Enter MRP in Wei'
+                  placeholder='Enter MRP in UGX'
                   value={mrp}
                   onChange={e => {
                     setMrp(e.target.value);
