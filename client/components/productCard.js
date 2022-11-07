@@ -97,32 +97,32 @@ const ProductCard = props => {
             )}
           </>
         ) : (
-        null
-//           <>
-//             {props.forSale && props.metamaskConnected && (
-//               <button
-//                 type='button'
-//                 class='mt-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center'
-//                 onClick={props.buy}
-//               >
-//                 Buy
-//               </button>
-//             )}
-//             {!props.metamaskConnected && (
-//               <>
-//                 <Metamask open={open} setOpen={setOpen} />
-//                 <button
-//                   type='button'
-//                   class='mt-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center'
-//                   onClick={() => {
-//                     setOpen(true);
-//                   }}
-//                 >
-//                   Buy
-//                 </button>
-//               </>
-//             )}
-//           </>
+        
+           <>
+            {props.forSale && props.metamaskConnected && (
+              <button
+                type='button'
+                class='mt-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center'
+                onClick={props.buy}
+              >
+                Buy
+              </button>
+           )}
+           {!props.metamaskConnected && (
+             <>
+               <Metamask open={open} setOpen={setOpen} />
+               <button
+                type='button'
+                class='mt-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center'
+                onClick={() => {
+                   setOpen(true);
+                 }}
+               >
+                Buy
+              </button>
+            </>
+          )}
+        </>
         )}
       </div>
     </div>
