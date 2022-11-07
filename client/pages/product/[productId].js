@@ -153,6 +153,7 @@ function ProductDetailPage(props) {
             setSale(flag);
           }}
           productId={productId}
+          buy={buy}
           metamaskConnected={metamaskConnected}
         />
         <div className='m-4 p-4 overflow-hidden flex-grow'>
