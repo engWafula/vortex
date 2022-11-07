@@ -48,7 +48,7 @@ const TimeLine = props => {
                 </svg>
               </span>
               <h3 class='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
-                Purchased by {`${transaction._to} at ${transaction._price} Wei`}
+                Purchased by {`${transaction._to} at ${transaction._price} UGX`}
               </h3>
               <time class='block mb-2 text-sm font-medium leading-none text-indigo-600'>
                 {`On ${new Date(transaction._time * 1000).toLocaleDateString(
