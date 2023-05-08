@@ -20,6 +20,12 @@ module.exports = {
       },
       network_id: '5',
     },
+    sepolia: {
+      provider: function () {
+        return new HDWalletProvider(mnemonic, url);
+      },
+      network_id: '11155111',
+    },
   },
   solc: {
     // Turns on the Solidity optimizer. For development the optimizer's
