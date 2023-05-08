@@ -46,7 +46,7 @@ export default function footer() {
       <div className='sm:w-[90%] w-full h-[0.25px] bg-gray-400 mt-5 ' />
 
       <div className='sm:w-[90%] w-full flex justify-between items-center mt-3'>
-        <p className='text-white text-base  text-justify '>@Tonfeera 2022</p>
+        <p className='text-white text-base  text-justify '>@Vortex Security System 2022</p>
         <p className='text-white text-base  text-justify '>
           All rights reserved
         </p>
