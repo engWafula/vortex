@@ -4,4 +4,7 @@ module.exports = {
     config.resolve.symlinks = false;
     return config;
   },
+  images: {
+    domains: ['www.google.com'],
+  },
 };

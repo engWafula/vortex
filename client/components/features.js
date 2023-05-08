@@ -46,7 +46,7 @@ const Features = () => {
             {features.map(feature => (
               <div key={feature.name} className='relative'>
                 <dt>
-                  <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white'>
+                  <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-black text-white'>
                     <feature.icon className='h-6 w-6' aria-hidden='true' />
                   </div>
                   <p className='ml-16 text-lg leading-6 font-medium text-gray-900 '>

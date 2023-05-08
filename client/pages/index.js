@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Tonfera</title>
+        <title>Vortex Security System</title>
         <meta
           name='description'
           content='We verify the authenticity of products and manufacturers, track their ownership, prevent counterfeiting in a completely decentralized and user-friendly manner. So that you can buy them safely.'

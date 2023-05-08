@@ -47,16 +47,12 @@ const Navbar = props => {
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex-shrink-0 flex items-center'>
-                  <img
+                  {/* <p
                     className='block lg:hidden h-10 w-auto'
-                    src='/logo.png'
-                    alt='Tonfeera'
-                  />
-                  <img
+                  >Vortex Security System</p>
+                  <p
                     className='hidden lg:block h-12 w-auto'
-                    src='/logo.png'
-                    alt='Tonfeera'
-                  />
+                  >Vortex Security System</p> */}
                 </div>
                 <div className='hidden sm:block sm:ml-6'>
                   <div className='flex space-x-4'>
@@ -65,8 +61,8 @@ const Navbar = props => {
                         <a
                           className={classNames(
                             item.current
-                              ? 'bg-gray-100 text-indigo-600'
-                              : 'text-gray-900 hover:bg-indigo-600 hover:text-white',
+                              ? 'bg-gray-100 text-black'
+                              : 'text-gray-900 hover:bg-black hover:text-white',
                             'px-3 py-2 rounded-md text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}

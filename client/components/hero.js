@@ -35,61 +35,36 @@ const Hero = () => {
 
   return (
     <>
-      <div className='relative bg-white overflow-hidden bg-transparent'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='relative z-10 pb-8  sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32'>
-            <main className='my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28'>
-              <div className='sm:text-center lg:text-left'>
-                <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
-                  <span className='block xl:inline'>Ensuring Quality </span>{' '}
-                  <span className='block text-indigo-600 xl:inline'>
-                    Using Blockchain
-                  </span>
-                </h1>
-                <p className='text-base mt-3  text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0'>
-                  We verify the authenticity of products and manufacturers,
-                  track their ownership, prevent counterfeiting in a completely
-                  decentralized and user-friendly manner. So that you can buy
-                  them knowing that they are safe.
-                </p>
-                <div className='mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
-                  <div className='rounded-md shadow'>
-                    <Link href='/brand'>
-                      <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
-                        Explore All Products
-                      </a>
-                    </Link>
-                  </div>
-                  <div className='mt-3 sm:mt-0 sm:ml-3'>
-                    <Link href='/brand/new'>
-                      <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10'>
-                        Add your Product
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </main>
+      <section className='py-24 flex items-center min-h-screen justify-center bg-white'>
+        <div className='mx-auto max-w-[43rem]'>
+          <div className='text-center'>
+            <p className='text-lg font-medium leading-8 text-indigo-600/95'>
+              Welcome to Vortex Security System
+            </p>
+            <h1 className='mt-3 text-[3.5rem] font-bold leading-[4rem] tracking-tight text-black'>
+              Powering a transparent and secure supply chain&nbsp;
+            </h1>
+            <p className='mt-3 text-lg leading-relaxed text-slate-400'>
+              Experience the future of product security with Vortex Security's
+              blockchain system, which uses cutting-edge technology to create a
+              secure and transparent supply chain that you can trust
+            </p>
           </div>
-        </div>
-      </div>
-      <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 mt-4 lg:mt-32'>
-        <div className='h-56 w-full sm:h-72 lg:h-3/5 bg-white relative'>
-          <Image src='/hero.gif' layout='fill' alt='' objectFit='contain' />
-        </div>
-        <div className='mt-5  md:ml-60 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
-          <div className='mt-3 sm:mt-0 sm:ml-3'>
-            <div>
-              <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10'>
-                Your Address:{' '}
-                {account
-                  ? shortenAddress(account)
-                  : 'You No Metamask address connected'}
+
+          <div className='mt-6 flex items-center justify-center gap-4'>
+            <Link href='/brand'>
+              <a className='transform rounded-md bg-indigo-600/95 px-5 py-3 font-medium text-white transition-colors hover:bg-indigo-700'>
+                Explore Products
               </a>
-            </div>
+            </Link>
+            <Link href='/brand/new'>
+              <a className='transform rounded-md border border-slate-200 px-5 py-3 font-medium text-slate-900 transition-colors hover:bg-slate-50'>
+                Add Product{' '}
+              </a>
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

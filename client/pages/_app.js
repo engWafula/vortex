@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel='shortcut icon' href='/logo.png' />
+        <link rel='shortcut icon' href='' />
       </Head>
       <Navbar />
       <Component {...mergedProps} />

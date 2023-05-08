@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function footer() {
   return (
-    <div className='w-full flex md:justify-center justify-between items-center flex-col p-4 bg-indigo-600'>
+    <div className='w-full flex md:justify-center justify-between items-center flex-col p-4 bg-black'>
       <div className='w-full flex sm:flex-row flex-col justify-between items-center my-4'>
         <div className='flex flex-[0.5] justify-center items-center'>
           <h1 className='text-2xl sm:text-2xl text-white'>Tonfeera</h1>
