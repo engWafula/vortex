@@ -55,7 +55,7 @@ const Upload = props => {
             <div class='flex text-sm text-gray-600'>
               <label
                 for='file-upload'
-                class='relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500'
+                class='relative cursor-pointer bg-white rounded-md font-medium text-gray-700 hover:text-gray-900 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500'
               >
                 <span>Choose Brand Logo</span>
                 <input
@@ -100,13 +100,13 @@ const Upload = props => {
       </div>
       {!uploading && !props.url && (
         <button
-          className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+          className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'
           onClick={handleUpload}
           disabled={!selectedFile}
         >
           <span className='absolute left-0 inset-y-0 flex items-center pl-3'>
             <UploadIcon
-              className='h-5 w-5 text-indigo-500 group-hover:text-indigo-400'
+              className='h-5 w-5 text-gray-700 group-hover:text-gray-700'
               aria-hidden='true'
             />
           </span>

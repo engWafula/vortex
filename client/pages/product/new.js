@@ -119,10 +119,10 @@ function NewProductPage(props) {
               />
             </div>
             <a target='_blank' href={`/product/${productId}`}>
-              <button className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+              <button className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'>
                 <span className='absolute left-0 inset-y-0 flex items-center pl-3'>
                   <LinkIcon
-                    className='h-5 w-5 text-indigo-500 group-hover:text-indigo-400'
+                    className='h-5 w-5 text-gray-500 group-hover:text-gray-500'
                     aria-hidden='true'
                   />
                 </span>
@@ -131,12 +131,12 @@ function NewProductPage(props) {
             </a>
 
             <button
-              className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+              className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'
               onClick={downloadQR}
             >
               <span className='absolute left-0 inset-y-0 flex items-center pl-3'>
                 <DocumentDownloadIcon
-                  className='h-5 w-5 text-indigo-500 group-hover:text-indigo-400'
+                  className='h-5 w-5 text-gray-500 group-hover:text-gray-400'
                   aria-hidden='true'
                 />
               </span>
@@ -159,13 +159,13 @@ function NewProductPage(props) {
           <div>
             <img
               className='mx-auto h-20 w-auto'
-              src='/logo.png'
+              src='/logo.jpg'
               alt='Tonfeera'
             />
             <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
               Mint New Product Tokens
             </h2>
-            <p className='font-medium mt-2 text-center text-sm text-indigo-600'>
+            <p className='font-medium mt-2 text-center text-sm text-gray-600'>
               You must have a brand before creating product tokens{' '}
             </p>
           </div>
@@ -177,7 +177,7 @@ function NewProductPage(props) {
                   name='model'
                   type='text'
                   required
-                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
+                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Enter Model Name'
                   value={model}
                   onChange={e => {
@@ -191,7 +191,7 @@ function NewProductPage(props) {
                   name='price'
                   type='number'
                   required
-                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
+                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Enter Price in UGX'
                   value={price}
                   onChange={e => {
@@ -205,7 +205,7 @@ function NewProductPage(props) {
                   name='mrp'
                   type='number'
                   required
-                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
+                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Enter MRP in UGX'
                   value={mrp}
                   onChange={e => {
@@ -214,7 +214,7 @@ function NewProductPage(props) {
                 />
               </div>
               <div>
-                <p className='font-medium my-2 text-center text-sm text-indigo-600'>
+                <p className='font-medium my-2 text-center text-sm text-gray-600'>
                   Select Manufacturing Date{' '}
                 </p>
                 <CalendarComponent
@@ -226,12 +226,12 @@ function NewProductPage(props) {
               <div>
                 {btnEnabled ? (
                   <button
-                    className='group relative w-full flex justify-center mt-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                    className='group relative w-full flex justify-center mt-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'
                     onClick={metamaskConnected ? createNewProduct : showPopup}
                   >
                     <span className='absolute left-0 inset-y-0 flex items-center pl-3'>
                       <PlusCircleIcon
-                        className='h-5 w-5 text-indigo-500 group-hover:text-indigo-400'
+                        className='h-5 w-5 text-gray-500 group-hover:text-gray-400'
                         aria-hidden='true'
                       />
                     </span>
