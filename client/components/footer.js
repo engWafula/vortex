@@ -49,7 +49,7 @@ export default function footer() {
 
       <div className='sm:w-[90%] w-full flex justify-between items-center mt-3'>
         <p className='text-white text-base  text-justify '>
-          @Vortex Security System 2022
+          @Vortex Security System 2023
         </p>
         <p className='text-white text-base  text-justify '>
           All rights reserved
