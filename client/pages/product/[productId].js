@@ -197,7 +197,7 @@ setModalVisible(false);
           <img
             src="https://i.giphy.com/media/PijzuUzUhm7hcWinGn/giphy.webp" // Replace with the actual path to the verified icon image
             alt="Verified Icon"
-            className="w-30 mb-4"
+            className="w-25 mb-4"
           />
           <p className="text-lg font-bold mb-8">This Product is Authentic.</p>
         </div>
