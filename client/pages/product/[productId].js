@@ -7,6 +7,7 @@ import Loading from '../../components/loading';
 import Message from '../../components/message';
 import TimeLine from '../../components/timeline';
 import Head from 'next/head';
+import { Modal, Button } from 'antd';
 
 function ProductDetailPage(props) {
   const [modal,setModalOpen] = useState(false)
