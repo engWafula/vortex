@@ -193,15 +193,13 @@ setModalVisible(false);
           </Button>
         ]}
       >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+ <div className="flex flex-col items-center">
           <img
             src="https://i.giphy.com/media/PijzuUzUhm7hcWinGn/giphy.webp" // Replace with the actual path to the verified icon image
             alt="Verified Icon"
-            style={{ width: 30 }}
+            className="w-30 mb-4"
           />
-        <p style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 24 }}>
-          The product has been verified and is not counterfeit.
-        </p>
+          <p className="text-lg font-bold mb-8">This Product is Authentic.</p>
         </div>
       </Modal>
     </>
