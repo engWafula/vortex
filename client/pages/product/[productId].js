@@ -9,6 +9,23 @@ import TimeLine from '../../components/timeline';
 import Head from 'next/head';
 
 function ProductDetailPage(props) {
+  const [modal,setModalOpen] = useState(false)
+  const [modalVisible, setModalVisible] = useState(false);
+
+  
+  useEffect(()=>{
+    setModalVisible(true)
+},[])
+
+const handleVerify = () => {
+// Perform verification logic here
+setModalVisible(true);
+};
+
+const handleClose = () => {
+setModalVisible(false);
+};
+
 
   console.log(props.errorStatus);
 
@@ -127,6 +144,7 @@ function ProductDetailPage(props) {
   if (loading) return <Loading />;
   if (msg) return <Message msg={msg} />;
   return (
+    <>
     <div>
       <Head>
         <title>{`Token ${productId} `}</title>
@@ -164,6 +182,28 @@ function ProductDetailPage(props) {
         </div>
       </div>
     </div>
+    <Modal
+        title="Product Verification"
+        open={modalVisible}
+        onCancel={handleClose}
+        footer={[
+          <Button key="close" onClick={handleClose}>
+            Close
+          </Button>
+        ]}
+      >
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src="https://i.giphy.com/media/PijzuUzUhm7hcWinGn/giphy.webp" // Replace with the actual path to the verified icon image
+            alt="Verified Icon"
+            style={{ width: 30 }}
+          />
+          <p style={{ fontSize: 16, fontWeight: 'bold' }}>
+            Product Authentic.
+          </p>
+        </div>
+      </Modal>
+    </>
   );
 }
 
