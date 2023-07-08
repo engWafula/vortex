@@ -30,7 +30,7 @@ function NewBrandPage(props) {
       await contract.methods
         .createBrand(brandName, url)
         .send({ from: accounts[0] });
-      setMsg('Brand Successfully Created');
+      setMsg('Brand Product Successfully Created');
       setLoading(false);
     } catch (err) {
       let str = 'Some Error Occured';

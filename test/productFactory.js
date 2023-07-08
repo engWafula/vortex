@@ -10,7 +10,7 @@ contract('ProductFactory', accounts => {
 
   // ============================== Unit Tests ========================================
   it('Create a Product', async () => {
-    await ProductFactoryInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await ProductFactoryInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -38,7 +38,7 @@ contract('ProductFactory', accounts => {
   });
 
   it('Product price must be less than MRP', async () => {
-    await ProductFactoryInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await ProductFactoryInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 

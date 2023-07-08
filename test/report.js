@@ -10,7 +10,7 @@ contract('Report', accounts => {
 
   // ============================== Unit Tests ========================================
   it('A legit buyer can report the brand', async () => {
-    await ReportInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await ReportInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[0],
     });
     await ReportInstance.createProduct(
@@ -28,7 +28,7 @@ contract('Report', accounts => {
   });
 
   it('A legit buyer can not report the brand twice', async () => {
-    await ReportInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await ReportInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[0],
     });
     await ReportInstance.createProduct(
@@ -49,7 +49,7 @@ contract('Report', accounts => {
   });
 
   it('A non buyer can not report the brand', async () => {
-    await ReportInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await ReportInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[0],
     });
     await utils.shouldThrow(

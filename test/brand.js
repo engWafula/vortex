@@ -12,7 +12,7 @@ contract('Brand', accounts => {
   it('Create a Brand', async () => {
     const result = await BrandInstance.createBrand(
       'Nike',
-      'nike.com/logo.png',
+      'nike.com/logo.jpg',
       {
         from: accounts[0],
       }
@@ -22,7 +22,7 @@ contract('Brand', accounts => {
   });
 
   it('Brand name must be unique', async () => {
-    await BrandInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await BrandInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[0],
     });
     await utils.shouldThrow(
@@ -31,7 +31,7 @@ contract('Brand', accounts => {
   });
 
   it('Owner can have only 1 Brand', async () => {
-    await BrandInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await BrandInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[0],
     });
     await utils.shouldThrow(

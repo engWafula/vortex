@@ -11,7 +11,7 @@ contract('Market', accounts => {
 
   // ============================== Unit Tests ========================================
   it('Change price of product', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -29,7 +29,7 @@ contract('Market', accounts => {
   });
 
   it('Only Owner can change price of product', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -47,7 +47,7 @@ contract('Market', accounts => {
   });
 
   it('Price must be less than MRP', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -65,7 +65,7 @@ contract('Market', accounts => {
   });
 
   it('Start Sale', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -82,7 +82,7 @@ contract('Market', accounts => {
   });
 
   it('End Sale', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -98,7 +98,7 @@ contract('Market', accounts => {
     assert.equal(result.logs[0].args._productId, 0);
   });
   it('Buy Product', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -122,7 +122,7 @@ contract('Market', accounts => {
   });
 
   it('Can not buy product from less balance', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
@@ -140,7 +140,7 @@ contract('Market', accounts => {
   });
 
   it('Can only buy product if its available for sale', async () => {
-    await MarketInstance.createBrand('Nike', 'nike.com/logo.png', {
+    await MarketInstance.createBrand('Nike', 'nike.com/logo.jpg', {
       from: accounts[1],
     });
 
