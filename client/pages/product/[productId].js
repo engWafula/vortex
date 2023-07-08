@@ -199,9 +199,9 @@ setModalVisible(false);
             alt="Verified Icon"
             style={{ width: 30 }}
           />
-          <p style={{ fontSize: 16, fontWeight: 'bold' }}>
-            Product Authentic.
-          </p>
+        <p style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 24 }}>
+          The product has been verified and is not counterfeit.
+        </p>
         </div>
       </Modal>
     </>
