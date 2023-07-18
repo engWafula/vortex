@@ -1,6 +1,6 @@
-###### Tonfera ##########
+###### Vortex ##########
 
-WELCOME TO TONFERA CODE REP
+WELCOME TO VORTEX CODE REP
 
 To run the frontend cd into the client folder and do the following
 
