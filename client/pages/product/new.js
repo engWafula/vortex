@@ -92,7 +92,7 @@ function NewProductPage(props) {
       .replace('image/png', 'image/octet-stream');
     let downloadLink = document.createElement('a');
     downloadLink.href = pngUrl;
-    downloadLink.download = `Tonfera_System${productId}.png`;
+    downloadLink.download = `vortex${productId}.png`;
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
