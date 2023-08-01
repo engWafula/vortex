@@ -158,11 +158,16 @@ function ProductDetailPage(props) {
     if (currentDate >= expirationDateObj) {
       return (
         <p className='text-lg font-bold mb-8'>
-          This Product is not yet expired, it expies on `${expirationDateObj}`.
+          This Product is expired, it expired on `${expirationDateObj}`.
         </p>
       );
     } else {
-      return <p className='text-lg font-bold mb-8'>This Product is expired.</p>;
+      return (
+        <p className='text-lg font-bold mb-8'>
+          {' '}
+          This Product is not yet expired, it expies on `${expirationDateObj}`.
+        </p>
+      );
     }
   }
 
