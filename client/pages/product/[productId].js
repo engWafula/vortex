@@ -10,23 +10,21 @@ import Head from 'next/head';
 import { Modal, Button } from 'antd';
 
 function ProductDetailPage(props) {
-  const [modal,setModalOpen] = useState(false)
+  const [modal, setModalOpen] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
 
-  
-  useEffect(()=>{
-    setModalVisible(true)
-},[])
+  useEffect(() => {
+    setModalVisible(true);
+  }, []);
 
-const handleVerify = () => {
-// Perform verification logic here
-setModalVisible(true);
-};
+  const handleVerify = () => {
+    // Perform verification logic here
+    setModalVisible(true);
+  };
 
-const handleClose = () => {
-setModalVisible(false);
-};
-
+  const handleClose = () => {
+    setModalVisible(false);
+  };
 
   console.log(props.errorStatus);
 
@@ -144,62 +142,87 @@ setModalVisible(false);
 
   if (loading) return <Loading />;
   if (msg) return <Message msg={msg} />;
+
+  function isProductExpired() {
+    // Convert manufactureDate to a Date object
+    const manufactureDateObj = new Date(props.mfg);
+
+    // Add one year to the manufacture date to get the expiration date
+    const expirationDateObj = new Date(manufactureDateObj);
+    expirationDateObj.setFullYear(manufactureDateObj.getFullYear() + 1);
+
+    // Get the current date
+    const currentDate = new Date();
+
+    // Compare the current date with the expiration date
+    if (currentDate >= expirationDateObj) {
+      return (
+        <p className='text-lg font-bold mb-8'>
+          This Product is not yet expired, it expies on `${expirationDateObj}`.
+        </p>
+      );
+    } else {
+      return <p className='text-lg font-bold mb-8'>This Product is expired.</p>;
+    }
+  }
+
   return (
     <>
-    <div>
-      <Head>
-        <title>{`Token ${productId} `}</title>
-        <meta
-          name='description'
-          content={`Details of Token ${productId}`}
-        ></meta>
-      </Head>
-      <div className='flex flex-1 flex-wrap justify-start items-start md:mx-14 md:pt-8'>
-        <ProductCard
-          isOwner={isOwner}
-          manufacturer={props.manufacturer}
-          model={props.model}
-          mfg={props.mfg}
-          price={props.price}
-          mrp={props.mrp}
-          forSale={props.forSale}
-          brandName={props.brandName}
-          reports={props.reports}
-          setPrice={newPrice => {
-            setPrice(newPrice);
-          }}
-          setSale={flag => {
-            setSale(flag);
-          }}
-          productId={productId}
-          buy={buy}
-          metamaskConnected={metamaskConnected}
-        />
-        <div className='m-4 p-4 overflow-hidden flex-grow'>
-          <h2 className='my-6 mx-6 text-3xl font-extrabold text-gray-900 text-left'>
-            TimeLine
-          </h2>
-          <TimeLine history={props.history} />
+      <div>
+        <Head>
+          <title>{`Token ${productId} `}</title>
+          <meta
+            name='description'
+            content={`Details of Token ${productId}`}
+          ></meta>
+        </Head>
+        <div className='flex flex-1 flex-wrap justify-start items-start md:mx-14 md:pt-8'>
+          <ProductCard
+            isOwner={isOwner}
+            manufacturer={props.manufacturer}
+            model={props.model}
+            mfg={props.mfg}
+            price={props.price}
+            mrp={props.mrp}
+            forSale={props.forSale}
+            brandName={props.brandName}
+            reports={props.reports}
+            setPrice={newPrice => {
+              setPrice(newPrice);
+            }}
+            setSale={flag => {
+              setSale(flag);
+            }}
+            productId={productId}
+            buy={buy}
+            metamaskConnected={metamaskConnected}
+          />
+          <div className='m-4 p-4 overflow-hidden flex-grow'>
+            <h2 className='my-6 mx-6 text-3xl font-extrabold text-gray-900 text-left'>
+              TimeLine
+            </h2>
+            <TimeLine history={props.history} />
+          </div>
         </div>
       </div>
-    </div>
-    <Modal
-        title="Product Verification"
+      <Modal
+        title='Product Verification'
         open={modalVisible}
         onCancel={handleClose}
         footer={[
-          <Button key="close" onClick={handleClose}>
+          <Button key='close' onClick={handleClose}>
             Close
-          </Button>
+          </Button>,
         ]}
       >
- <div className="flex flex-col items-center">
+        <div className='flex flex-col items-center'>
           <img
-            src="https://i.giphy.com/media/PijzuUzUhm7hcWinGn/giphy.webp" // Replace with the actual path to the verified icon image
-            alt="Verified Icon"
-            className="w-25 mb-4"
+            src='https://i.giphy.com/media/PijzuUzUhm7hcWinGn/giphy.webp' // Replace with the actual path to the verified icon image
+            alt='Verified Icon'
+            className='w-25 mb-4'
           />
-          <p className="text-lg font-bold mb-8">This Product is Authentic.</p>
+          <p className='text-lg font-bold mb-8'>This Product is Authentic.</p>
+          {isProductExpired()}
         </div>
       </Modal>
     </>
