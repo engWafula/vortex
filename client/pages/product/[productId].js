@@ -159,23 +159,11 @@ function ProductDetailPage(props) {
     if (currentDate >= expirationDateObj) {
       return (
         <p className='text-lg font-bold mb-8'>
-          This Product is expired, it expired on{' '}
-          {new Date(currentDate)
-            .setFullYear(currentDate.getFullYear() + 1)
-            .toLocaleDateString()}
-          .
+          This Product is expired, it expired on 30/8/2024
         </p>
       );
     } else {
-      return (
-        <p className='text-lg font-bold mb-8'>
-          It expires on{' '}
-          {new Date(currentDate)
-            .setFullYear(currentDate.getFullYear() + 1)
-            .toLocaleDateString()}
-          .
-        </p>
-      );
+      return <p className='text-lg font-bold mb-8'>It expires on 30/8/2024</p>;
     }
   }
 
