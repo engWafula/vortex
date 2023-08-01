@@ -160,14 +160,13 @@ function ProductDetailPage(props) {
 
       return (
         <p className='text-lg font-bold mb-8'>
-          This Product is expired, it expired on {expirationDateStr}.
+          This Product is expired, it expired on `${expirationDateStr}`.
         </p>
       );
     } else {
       return (
         <p className='text-lg font-bold mb-8'>
-          {' '}
-          This Product is not yet expired.it expires on {expirationDateStr}.
+          This Product is not yet expired.it expires on `${expirationDateStr}`.
         </p>
       );
     }
