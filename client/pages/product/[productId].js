@@ -165,7 +165,7 @@ function ProductDetailPage(props) {
       return (
         <p className='text-lg font-bold mb-8'>
           {' '}
-          This Product is not yet expired, it expies on `${expirationDateObj}`.
+          This Product is not yet expired.
         </p>
       );
     }
@@ -227,7 +227,7 @@ function ProductDetailPage(props) {
             className='w-25 mb-4'
           />
           <p className='text-lg font-bold mb-8'>This Product is Authentic.</p>
-          {/* {isProductExpired()} */}
+          {isProductExpired()}
         </div>
       </Modal>
     </>
