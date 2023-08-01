@@ -227,7 +227,7 @@ function ProductDetailPage(props) {
             className='w-25 mb-4'
           />
           <p className='text-lg font-bold mb-8'>This Product is Authentic.</p>
-          {isProductExpired()}
+          {/* {isProductExpired()} */}
         </div>
       </Modal>
     </>
