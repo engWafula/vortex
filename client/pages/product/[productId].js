@@ -153,11 +153,10 @@ function ProductDetailPage(props) {
 
     // Get the current date
     const currentDate = new Date();
+    const expirationDateStr = expirationDateObj.toLocaleDateString(); // Convert to a human-readable date format
 
     // Compare the current date with the expiration date
     if (currentDate >= expirationDateObj) {
-      const expirationDateStr = expirationDateObj.toLocaleDateString(); // Convert to a human-readable date format
-
       return (
         <p className='text-lg font-bold mb-8'>
           This Product is expired, it expired on `${expirationDateStr}`.
@@ -166,7 +165,7 @@ function ProductDetailPage(props) {
     } else {
       return (
         <p className='text-lg font-bold mb-8'>
-          This Product is not yet expired.it expires on `${expirationDateStr}`.
+          It expires on `${expirationDateStr}`.
         </p>
       );
     }
